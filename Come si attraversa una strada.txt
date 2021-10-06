@@ -1,0 +1,34 @@
+VARIABILI
+- Strisce pedonali
+- Semaforo
+- Veicoli
+- Pedoni
+
+Azione: devo attraversare la strada, c'è il semaforo?
+
+1 - Mi trovo sul marciapiede (INIZIO BLOCCO)
+    a - Individuare le strisce pedonali
+            1 - Guardare avanti se ci sono strisce
+                TRUE → ci sono, proseguo con il punto 1b
+                FALSE → non ci sono, prosegui sul marciapiede x metri e poi ripeti punto 1.a.1
+    b - Raggiungere le strisce pedonali
+            1 - Camminare verso le strisce
+            2 - Fermarsi al raggiungimento delle strisce
+
+2 - Controllare se c'è il semaforo
+    a - FALSE → controllare se arrivano veicoli
+            TRUE → ritorna al punto 2a
+            FALSE → proseguire con il punto 3
+    b - TRUE → controllare il colore del semaforo
+            TRUE → il semaforo è verde e posso proseguire al punto 3
+            FALSE → il semaforo non è verde, ritorna al punto 2b
+
+3 - Attraversare la strada
+    a - Controllare la presenza di altri pedoni
+        TRUE → evitarli
+        FALSE → proseguire
+    b - Camminare sulle strisce
+
+4 - Arrivo sull'altro lato della strada (FINE BLOCCO)
+
+
